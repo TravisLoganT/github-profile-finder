@@ -13,13 +13,16 @@ export default function GithubProfileFinder() {
 		const data = await response.json();
 		if (data) {
 			setUserData(data);
-			setLoading(false);
+            setLoading(false);
+            setUsername('');
 		}
 
 		console.log(data);
 	}
 
-	function handleSubmit() {}
+    function handleSubmit() {
+        fetchGitHubUserData();
+    }
 
 	useEffect(() => {
 		fetchGitHubUserData();
