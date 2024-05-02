@@ -8,6 +8,7 @@ html {
 	max-width: 40rem;
 	padding: 10rem;
 	border-radius: 1rem;
+    box-sizing: border-box;
 }
 
 .input-wrapper {
@@ -26,6 +27,7 @@ html {
 		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 	text-align: center;
 	background-color: #3b3842;
+    color: #03f7eb;
 }
 
 input[name="search-by-username"]::placeholder {
@@ -87,4 +89,28 @@ input[name="search-by-username"]::placeholder {
 	margin: 0px;
 	font-size: 1rem;
 	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .github-profile-container {
+        padding: 1.5rem; 
+    }
+
+    .input-wrapper {
+        gap: 0.5rem; 
+    }
+
+    .input-wrapper input {
+        width: 50%; 
+    }
+    .input-wrapper button {
+        width: 25%;
+    }
+
+    .name-container,
+    .profile-info div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
