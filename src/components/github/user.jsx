@@ -11,7 +11,8 @@ export default function User({ user }) {
 
 	const createdDate = new Date(created_at);
 
-	return (
+    return (
+        console.log(user),
 		<div className="user">
 			<div>
 				<img
@@ -20,16 +21,19 @@ export default function User({ user }) {
 					alt="User"
 				/>
 			</div>
-			<div className="name-container">
-				<a href={`https://github.com/${login}`}>{name || login}</a>
-				<p>
-					User joined on{" "}
-					{`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
-						month: "short",
-					})} ${createdDate.getFullYear()}`}
-				</p>
+            <div className="name-container">
+                <p className="name">{name}</p>
+				<a href={`https://github.com/${login}`}>{login}</a>
 			</div>
 			<div className="profile-info">
+				<div>
+					<p>
+						User joined on{" "}
+						{`${createdDate.getDate()} ${createdDate.toLocaleString("en-us", {
+							month: "short",
+						})} ${createdDate.getFullYear()}`}
+					</p>
+				</div>
 				<div>
 					<p>Public Repos</p>
 					<p>{public_repos}</p>

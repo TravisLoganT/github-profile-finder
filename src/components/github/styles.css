@@ -1,67 +1,90 @@
+html {
+	background-color: #312f37;
+}
+
 .github-profile-container {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1000px;
-	padding: 20px;
-	border-radius: 8px;
+	max-width: 40rem;
+	padding: 10rem;
+	border-radius: 1rem;
 }
 
 .input-wrapper {
 	display: flex;
-	gap: 20px;
+	gap: 1rem;
 	justify-content: center;
-	margin-bottom: 20px;
+	margin-bottom: 1rem;
 }
 
 .input-wrapper input {
-	padding: 12px;
+	padding: 0.7rem;
 	font-size: 16px;
 	border: none;
-    width: 200px;
+	width: 10rem;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	text-align: center;
+	background-color: #3b3842;
+}
+
+input[name="search-by-username"]::placeholder {
+	color: #03f7eb;
 }
 
 .input-wrapper button {
-	padding: 12px 5px;
+	padding: 0.7rem 0.5rem;
 	border: none;
-	border-radius: 8px;
-	background-color: red;
-	color: #000;
+	border-radius: 0.3rem;
+	background-color: #03f7eb;
+	color: black;
 	cursor: pointer;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .user {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 15px;
-	border-radius: 10px;
-	border: 1px solid #ccc;
+	padding: 2rem;
+	border-radius: 0.5rem;
+	border: 0.1rem solid #03f7eb;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	background-color: #3b3842;
+	color: white;
 }
 
 .avatar {
-	height: 150px;
+	height: 7rem;
 	aspect-ratio: 1/1;
 	border-radius: 50%;
 }
 
 .name-container {
 	display: flex;
-	gap: 20px;
+	gap: 1rem;
 	justify-content: center;
-	margin-top: 20px;
+	align-items: center;
+	margin-top: 1rem;
 }
 
 .name-container p {
-	margin: 0px;
-	font-size: 20px;
+	margin: 0;
+	font-size: 1rem;
 	font-weight: bold;
+}
+
+.name-container a {
+	color: #03f7eb;
 }
 
 .profile-info div {
 	display: flex;
 	justify-content: center;
-	gap: 20px;
+	gap: 1rem;
 	margin: 0px;
-	font-size: 20px;
+	font-size: 1rem;
 	font-weight: bold;
 }

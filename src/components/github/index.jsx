@@ -20,8 +20,16 @@ export default function GithubProfileFinder() {
 	}
 
 	function handleSubmit() {
-		fetchGitHubUserData();
-	}
+        if (userName.trim() !== "") { 
+            fetchGitHubUserData();
+        }
+    }
+
+    function handleKeyDown(event) {
+        if (event.key === "Enter") {
+            handleSubmit();
+        }
+    }
 
 	useEffect(() => {
 		fetchGitHubUserData();
@@ -37,11 +45,13 @@ export default function GithubProfileFinder() {
 				<input
 					name="search-by-username"
 					type="text"
-					placeholder="Search GitHub Username"
+                    placeholder="Search GitHub Username"
+                    color="white"
 					value={userName}
 					onChange={(e) => setUsername(e.target.value)}
-				/>
-				<button onClick={handleSubmit}>Search</button>
+                    onKeyDown={handleKeyDown} 
+                />
+                <button onClick={handleSubmit}>Search</button>
 			</div>
 			{userData !== null ? <User user={userData} /> : null}
 		</div>
