@@ -3,10 +3,10 @@ html {
 }
 
 .github-profile-container {
-	margin: 0 auto;
+	margin: 6rem auto;
 	width: 100%;
 	max-width: 40rem;
-	padding: 10rem;
+	padding: 2rem;
 	border-radius: 1rem;
     box-sizing: border-box;
 }
