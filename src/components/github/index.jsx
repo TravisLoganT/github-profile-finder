@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import User from "./user";
+import "./styles.css";
 
 export default function GithubProfileFinder() {
 	const [userName, setUsername] = useState("TravisLoganT");
@@ -13,16 +14,14 @@ export default function GithubProfileFinder() {
 		const data = await response.json();
 		if (data) {
 			setUserData(data);
-            setLoading(false);
-            setUsername('');
+			setLoading(false);
+			setUsername("");
 		}
-
-		console.log(data);
 	}
 
-    function handleSubmit() {
-        fetchGitHubUserData();
-    }
+	function handleSubmit() {
+		fetchGitHubUserData();
+	}
 
 	useEffect(() => {
 		fetchGitHubUserData();
